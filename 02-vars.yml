@@ -8,7 +8,7 @@
       ansible.builtin.debug:
         msg: URL == {{URL}}
 
-- name: Declare variable in another file
+- name: Declare variable in another main.yml
   hosts: all
   connection: local
   vars_files:
@@ -29,7 +29,7 @@
       vars:
         URL: task.example.com
 
-- name: Declare variable from inventory file
+- name: Declare variable from inventory main.yml
   hosts: all
   connection: local
   tasks:
